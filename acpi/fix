@@ -1,31 +1,25 @@
 #!/bin/bash
 
-# Specify the devices you want to disable
-DEVICES_TO_DISABLE="GPP0 GPP8"
+case "$1" in
+    hibernate|suspend)
+        # Log a message indicating that the script is being executed during hibernate or suspend
+        /usr/bin/logger -t "YourScriptName" "Script executed during $1 state transition"
 
-case $1 in
-    hibernate)
-        echo "Going to suspend to disk!"
+        # Check if the device wake-up state is enabled, and if so, disable it
+        if grep -q "GP00.*enabled" /proc/acpi/wakeup; then
+            /usr/bin/logger -t "YourScriptName" "Disabling wake-up for device GP00"
+            sh -c 'echo "GP00" > /proc/acpi/wakeup'
+        fi
         ;;
-    suspend)
-        echo "Fixing ACPI settings for specified devices."
+    thaw|resume)
+        # Log a message indicating that the script is being executed during thaw or resume
+        /usr/bin/logger -t "YourScriptName" "Script executed during $1 state transition"
 
-        for device in $DEVICES_TO_DISABLE; do
-            grep -q "$device" /proc/acpi/wakeup && echo "$device found, disabling" || echo "$device not found"
-            sed -i "/$device/s/\(^.*\)\(enabled\)\(.*$\)/\1disabled\3/" /proc/acpi/wakeup
-        done
-
-        echo "Suspending to RAM."
-        ;;
-    thaw)
-        echo "Suspend to disk is now over!"
-        ;;
-    resume)
-        echo "Resuming from suspend."
+        # No action needed when waking up
         ;;
     *)
-        echo "Usage: $0 {hibernate|suspend|thaw|resume}" >&2
-        exit 1
+        # Log a message if an unrecognized state is encountered
+        /usr/bin/logger -t "YourScriptName" "Unrecognized state: $1"
         ;;
 esac
 

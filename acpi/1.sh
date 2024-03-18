@@ -11,10 +11,13 @@ fi
 # Verify if the directory was created successfully
 if [ -d "$target_dir" ]; then
     # Copy the file to the target directory with -p option
-    sudo cp -p fix "${target_dir}45fixusbwakeup"
+    sudo cp -p fix "${target_dir}50_wakeupfix"
 
-    # Set permissions for the copied file
-    sudo chmod +x "${target_dir}45fixusbwakeup"
+    # Set ownership and permissions for the copied file
+    sudo chown root:root "${target_dir}50_wakeupfix"
+    sudo chmod 755 "${target_dir}50_wakeupfix"
+
+    echo "Script deployed successfully."
 else
     echo "Failed to create directory: $target_dir"
 fi
