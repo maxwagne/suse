@@ -2,5 +2,5 @@
 # /etc/...
 #
 # standby acapi bug
-#
+cat /proc/acpi/wakeup
 #
