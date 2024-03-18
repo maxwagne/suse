@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Specify the devices you want to disable
+DEVICES_TO_DISABLE="GPP0 GPP8"
+
+case $1 in
+    hibernate)
+        echo "Going to suspend to disk!"
+        ;;
+    suspend)
+        echo "Fixing ACPI settings for specified devices."
+
+        for device in $DEVICES_TO_DISABLE; do
+            grep -q "$device" /proc/acpi/wakeup && echo "$device found, disabling" || echo "$device not found"
+            sed -i "/$device/s/\(^.*\)\(enabled\)\(.*$\)/\1disabled\3/" /proc/acpi/wakeup
+        done
+
+        echo "Suspending to RAM."
+        ;;
+    thaw)
+        echo "Suspend to disk is now over!"
+        ;;
+    resume)
+        echo "Resuming from suspend."
+        ;;
+    *)
+        echo "Usage: $0 {hibernate|suspend|thaw|resume}" >&2
+        exit 1
+        ;;
+esac
+
