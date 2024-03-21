@@ -1,25 +1,26 @@
 #!/bin/bash
 
-case "$1" in
-    hibernate|suspend)
-        # Log a message indicating that the script is being executed during hibernate or suspend
-        /usr/bin/logger -t "YourScriptName" "Script executed during $1 state transition"
+log_file="/tmp/script_log.txt"
 
-        # Check if the device wake-up state is enabled, and if so, disable it
-        if grep -q "GP00.*enabled" /proc/acpi/wakeup; then
-            /usr/bin/logger -t "YourScriptName" "Disabling wake-up for device GP00"
-            sh -c 'echo "GP00" > /proc/acpi/wakeup'
-        fi
-        ;;
-    thaw|resume)
-        # Log a message indicating that the script is being executed during thaw or resume
-        /usr/bin/logger -t "YourScriptName" "Script executed during $1 state transition"
+log_message() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$log_file"
+}
 
-        # No action needed when waking up
+disable_wake_up() {
+    if grep "GPP0" /proc/acpi/wakeup | grep -q "*enabled"; then
+        log_message "Disabling wake-up for device GPP0"
+        echo "GPP0" > /proc/acpi/wakeup
+    else
+        log_message "Wake-up for device GPP0 already disabled"
+    fi
+}
+
+case "$1/$2" in
+    pre/*)
+        log_message "Going to $2 state"
         ;;
-    *)
-        # Log a message if an unrecognized state is encountered
-        /usr/bin/logger -t "YourScriptName" "Unrecognized state: $1"
+    post/*)
+        log_message "Waking up from $2 state"
+        disable_wake_up
         ;;
 esac
-
