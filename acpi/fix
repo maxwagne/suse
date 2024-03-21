@@ -7,7 +7,7 @@ log_message() {
 }
 
 disable_wake_up() {
-    if grep "GPP0" /proc/acpi/wakeup | grep -q "*enabled"; then
+    if grep "GPP0" /proc/acpi/wakeup | grep "*enabled" >/dev/null ; then
         log_message "Disabling wake-up for device GPP0"
         echo "GPP0" > /proc/acpi/wakeup
     else
