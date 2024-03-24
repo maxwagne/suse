@@ -1,0 +1,476 @@
+    1  cd /etc/sddm.conf.d
+    2  ls
+    3  ls -a
+    4  vim autologin.conf
+    5  sudo vim autologin.conf
+    6  reboot
+    7  ls /usr/share/wayland-sessions/
+    8  sudo vim autologin.conf
+    9  su
+   10  cd /
+   11  ls
+   12  ls opt
+   13  ls -a opt
+   14  ls
+   15  mkdir src
+   16  cd src
+   17  git init
+   18  git clone https://github.com/maxwagne/pmox.git
+   19  sudo vim /etc/bluetooth/main.conf
+   20  cat /proc/acpi/wakeup
+   21  su
+   22  sudo zypper install steam
+   23  steam
+   24  sudo zypper in lutris
+   25  lutris
+   26  cd /usr/max/src
+   27  cd /usr/src
+   28  ls
+   29  cd /home/max/src
+   30  ls
+   31  git push origin master
+   32  cd
+   33  sl
+   34  ls
+   35  rm -r src
+   36  ls
+   37  sudo rm -r src
+   38  ls
+   39  mkdir src
+   40  cd src
+   41  git clone https://github.com/maxwagne/pmox.git
+   42  ls
+   43  mkdir suse
+   44  cd suse
+   45  git init
+   46  vim 1.sh
+   47  gh repo create
+   48  sudo zypper install gh
+   49  gh repo create
+   50  gh auth login
+   51  gh repo create
+   52  git remote add origin https://github.com/maxwagne/suse.git
+   53  git add .
+   54  git commit -m "initial commit"
+   55  git push -u master
+   56  git push -u main
+   57  git config --global user.name "maxwagne"
+   58  git commit --amend --reset-author
+   59  git status
+   60  history
+   61  cd /home/max/src
+   62  ls
+   63  cd suse
+   64  ls
+   65  mkdir acapi
+   66  cd acapi
+   67  vim 1.sh
+   68  vim fix
+   69  ls
+   70  git . add
+   71  git add .
+   72  git commit
+   73  git push master origin
+   74  git status
+   75  cd ..
+   76  git status
+   77  git add .
+   78  git status
+   79  git commit -m "1.sh"
+   80  git config --global user.email maxwagne@proton.me
+   81  git commit --amend --reset-author
+   82  git status
+   83  git push origin master
+   84  cd acapi
+   85  vim fix
+   86  cat 1.sh
+   87  ls /usr/lib/pm-utils/sleep.d
+   88  bash 1.sh
+   89  vim 1.sh
+   90  bash 1.sh
+   91  vim 1.sh
+   92  ls
+   93  ls -l fix
+   94  sudo 1.sh
+   95  ls
+   96  sudo bash 1.sh
+   97  vim 1.sh
+   98  sudo bash 1.sh
+   99  ls /usr/lib/pm-utils/sleep.d
+  100  cat /usr/lib/pm-utils/sleep.d/45fixusbwakeup
+  101  vim 1.sh
+  102  ls -l /usr/lib/pm-utils/sleep.d/45fixusbwakeup
+  103  vim fix
+  104  history
+  105  cat /proc/acpi/wakeup
+  106  snapper status
+  107  su
+  108  cat /car/log/syslog
+  109  cd /var/log/
+  110  ls
+  111  cd syslog
+  112  cd messages
+  113  logger man
+  114  logger
+  115  logger -man
+  116  logger --helpo
+  117  logger --help
+  118  ls
+  119  ls -a
+  120  ls -l
+  121  logger "testentry"
+  122  ls -l
+  123  find messages
+  124  journalctl -u rsyslog
+  125  sudo journalctl -u rsyslog
+  126  logger "testentry"
+  127  sudo journalctl -u rsyslog
+  128  sudo logger "testentry"
+  129  sudo journalctl -u rsyslog
+  130  sudo systemctl status rsyslog
+  131  cat /proc/acpi/wakeup
+  132  echo "GPP0" > /proc/acpi/wakeup
+  133  sudo echo "GPP0" > /proc/acpi/wakeup
+  134  su
+  135  sudo sh -c
+  136  sh -c "echo GPP8 > /proc/acpi/wakeup"
+  137  cat /proc/acpi/wakeup
+  138  sh -c "echo GPP8 > /proc/acpi/wakeup"
+  139  sudo sh -c "echo GPP8 > /proc/acpi/wakeup"
+  140  sudo sh -c "echo GPP0 > /proc/acpi/wakeup"
+  141  cat /proc/acpi/wakeup
+  142  su
+  143  sudo zypper install keepassxc
+  144  keepassxc
+  145  ls -l /usr/lib/pm-utils/sleep.d/
+  146  cd /usr/lib/pm-utils/sleep.d/
+  147  su
+  148  grep -q "GP00.*enabled" /proc/acpi/wakeup
+  149  GPP0      S4    *enabled   pci:0000:00:01.1
+  150  awk '$3 == "*enabled" && /GP00/' /proc/acpi/wakeup
+  151  grep "GP00.*\*enabled" /proc/acpi/wakeup
+  152  grep -q "GP00.*\*enabled" /proc/acpi/wakeup || echo "Wake-up state for GP00 is not enabled"
+  153  grep "^GP00" /proc/acpi/wakeup
+  154  cat /proc/acpi/wakeup
+  155  grep "GPP" /proc/acpi/wakeup
+  156  grep "GPPO" /proc/acpi/wakeup
+  157  grep "GPP0" /proc/acpi/wakeup
+  158  grep -q "GPP0.*enabled" /proc/acpi/wakeup
+  159  grep "GPP0" /proc/acpi/wakeup | grep -q "enabled"
+  160  grep "GPP0" /proc/acpi/wakeup
+  161  grep "GPP0" /proc/acpi/wakeup | grep -q "enabled"
+  162  grep "GPP0" /proc/acpi/wakeup
+  163  grep "GPP0" /proc/acpi/wakeup | awk '{print $3}' | grep -q "*enabled"
+  164  grep "GPP0" /proc/acpi/wakeup | grep "*enabled"
+  165  grep "GPP0" /proc/acpi/wakeup | grep -q "*enabled"
+  166  cd /home/max/suse
+  167  cd /home/max/src/suse
+  168  git status
+  169  git commit
+  170  git add .
+  171  git commit
+  172  git push origin master
+  173  git status
+  174  git push origin master
+  175  git status
+  176  git commit
+  177  git commit -m "new"
+  178  git push origin master
+  179  cd /home/max/src
+  180  ls
+  181  git status
+  182  cd suse
+  183  git status
+  184  git commit
+  185  git add .
+  186  git commit
+  187  git status
+  188  git push origin master
+  189  bash 1.sh
+  190  cat 1.sh
+  191  cd acpi
+  192  bash 1.sh
+  193  systemctl | grep -i systemd
+  194  history
+  195  cd /usr/lib/pm-utils/sleep.d/
+  196  ls
+  197  rm 50_wakeupfix
+  198  sudo rm 50_wakeupfix 
+  199  cd /home/max/src/suse/acpi
+  200  sudo bash 1.sh
+  201  ls -l /usr/lib/systemd/system-sleep/
+  202  sudo bash 1.sh
+  203  catl /usr/lib/systemd/system-sleep/50_wakeupfix.sh 
+  204  cat /usr/lib/systemd/system-sleep/50_wakeupfix.sh 
+  205  ls
+  206  cd
+  207  ls
+  208  cd ./src/suse
+  209  1.sh
+  210  sh 1.sh\
+  211  sh 1.sh
+  212  git status
+  213  git add .
+  214  git commit
+  215  git push origin master
+  216  bash 1.sh
+  217  bash ./acpi/1.sh
+  218  rep "GPP0" /proc/acpi/wakeup | grep -q "*enabled"
+  219  bash ./acpi/1.sh
+  220  su
+  221  lsblk
+  222  cd downloads
+  223  cd Downloads
+  224  dd if=proxmox-ve_8.1-2.iso of=/dev/sda status=progess
+  225  dd if=proxmox-ve_8.1-2.iso of=/dev/sda status=progress
+  226  sudo dd if=proxmox-ve_8.1-2.iso of=/dev/sda status=progess
+  227  sudo dd if=proxmox-ve_8.1-2.iso of=/dev/sda status=progress
+  228  ip a
+  229  cat /etc/network/interfaces
+  230  cat /etc/network/interface
+  231  cat /etc/network/interfaces
+  232  ip a
+  233  systemctl status smbd
+  234  systemctl start smbd
+  235  apt list --installed | grep samba
+  236  apt-list --installed | grep samba
+  237  apt-get list --installed | grep samba
+  238  ip add
+  239  sudo snapper list
+  240  su
+  241  firewall-cmd --add-port=2049/udp
+  242  firewall-cmd --add-port=2049/tcp
+  243  su
+  244  ssh barboss@192.168.178.34
+  245  id max
+  246  sudo vim /etc/exports
+  247  cat vim /etc/exports
+  248  sudo vim /etc/exports
+  249  sudo systemctl restart nfs-server.service
+  250  sudo systemctl status nfs-server.service
+  251  systemctl status nfs
+  252  sudo systemctl start nfs
+  253  sudo zypper install nfs-kernel-server
+  254  sudo systemctl enable nfsserver
+  255  systemctl list-unit-files | grep nfs
+  256  sudo systemctl enable nfs-server
+  257  sudo systemctl start nfs-server
+  258  sudo systemctl status nfs-server
+  259  vim /etc/exports
+  260  sudo vim /etc/exports
+  261  sudo systemctl restart nfs-server
+  262  showmount -e localhost
+  263  sudo showmount -e localhost
+  264  sudo firewall-cmd --zone=public --add-port=2049/tcp --permanent
+  265  sudo firewall-cmd --zone=public --add-port=111/tcp --permanent
+  266  sudo firewall-cmd --reload
+  267  sudo mount -t nfs 192.168.178.34:/nfs /mnt/net-nfs1
+  268  mkdir -p /mnt/net-nfs1
+  269  sudo mkdir -p /mnt/net-nfs1
+  270  sudo mount -t nfs 192.168.178.34:/nfs /mnt/net-nfs1
+  271  sudo mount -t nfs 192.168.178.34:/pmox /mnt/net-nfs1
+  272  sudo mount -t nfs 192.168.178.34:/pmox/ /mnt/net-nfs1
+  273  apt install nfs-common
+  274  zypper install nfs-common
+  275  sudo zypper install nfs-common
+  276  sudo mount -t nfs 192.168.178.34:/pmox/ /mnt/net-nfs1
+  277  sudo mount -t nfs 192.168.178.34:/volume1/pmox/ /home/net-nfs1
+  278  cd /mnt/net-nfs1
+  279  sudo /mnt/net-nfs1
+  280  sudo cd /mnt/net-nfs1
+  281  cd -s /mnt/net-nfs1
+  282  sudo umount -t nfs 192.168.178.34:/pmox/ /mnt/net-nfs1
+  283  sudo umount -t nfs 192.168.178.34:/volume1/pmox
+  284  sudo mount -t nfs 192.168.178.34:/volume1/pmox/ /home/max/net-nfs1
+  285  mkdir /home/max/net-nfs1
+  286  sudo mount -t nfs 192.168.178.34:/volume1/pmox/ /home/max/net-nfs1
+  287  cd /home/max/net-nfs1
+  288  su
+  289  cd /home/max/net-nfs1
+  290  mount | grep /mnt/net-nfs1
+  291  mount | grep /home/max/net-nfs1
+  292  333
+  293  sudo umount -t nfs 192.168.178.34:/volume1/pmox
+  294  sudo mount -t nfs -o username=guest 192.168.178.34:/volume1/pmox /home/max/net-nfs1
+  295  sudo mount -t nfs -o username=barboss 192.168.178.34:/volume1/pmox /home/max/net-nfs1
+  296  sudo mount -t nfs -o username=barboss 192.168.178.34:/volume1/pmox /home/max/net-nfs1/
+  297  sudo mount -t nfs -o uid=1026,gid=100 192.168.178.34:/volume1/pmox /home/max/net-nfs1
+  298  sudo mount -t nfs -o nfsvers=4.0,uid=1026,gid=100 192.168.178.34:/volume1/pmox /home/max/net-nfs1
+  299  sudo mount -t nfs -o nfsvers=4.0,nouser 192.168.178.34:/volume1/pmox /home/max/net-nfs1
+  300  ls
+  301  cd net-nfs1/\
+  302  cd net-nfs1/
+  303  reboot
+  304  reboot now
+  305  sudo mount -t nfs -o nfsvers=4.0,nouser 192.168.178.34:/volume1/pmox /home/max/net-nfs1
+  306  su
+  307  sudo mount -t nfs -o nfsvers=4.0,nouser 192.168.178.34:/volume1/pmox /home/max/net-nfs1
+  308  cd net-nfs1
+  309  mount | grep /home/max/net-nfs1
+  310  sudo ls /home/max/net-nfs1
+  311  sudo chown -R max:max /home/max/net-nfs1
+  312  cd net-nfs1/
+  313  sudo chmod -R u+rwx /home/max/net-nfs1
+  314  cd net-nfs1/
+  315  sudo systemctl stop nfs-server
+  316  sudo mv /nfs /home/share-nfs
+  317  vim /etc/exports
+  318  sudo vim /etc/exports
+  319  cat vim /etc/exports
+  320  sudo systemctl restart nfs-server
+  321  sudo systemctl restart nfs-client.target
+  322  sudo systemctl stop nfs-server
+  323  sudo mv /home/share-nfs /home/max/net-nfs2-share
+  324  sudo vim /etc/exports
+  325  sudo systemctl restart nfs-server
+  326  sudo systemctl restart nfs-client.target
+  327  sudo chown -R max:max /home/max/net-nfs2-share
+  328  sudo chmod -R u+rwx /home/max/net-nfs2-share
+  329  ls -l /home/max/net-nfs2-share
+  330  sudo chmod -R ugo+rwx /home/max/net-nfs2-share
+  331  ls -l /home/max/net-nfs2-share
+  332  history
+  333  cd
+  334  ls
+  335  cd
+  336  systemctl status nfs
+  337  sudo systemctl start nfs
+  338  systemctl status nfs-server
+  339  showmount -e localhost
+  340  /home/max/net-nfs1/dump sudo showmound - localhost
+  341  cat /etc/exports
+  342  sudo showmount -e localhost
+  343  cat /etc/exports
+  344  su
+  345  snapper list
+  346  su
+  347  sudo snapper list
+  348  snapper rollback 34
+  349  sudo snapper rollback 34
+  350  reboot now
+  351  sudo reboot now
+  352  status nfs-server
+  353  sudo systemctl status nfs-server
+  354  sudo systemctl enable nfs-server
+  355  mv /home/max/nfs /srv/nfs
+  356  ls /home/max
+  357  mv /home/max/net-nfs-share /srv/nfs
+  358  mv /home/max/net-nfs2-share /srv/nfs
+  359  sudo mv /home/max/net-nfs2-share /srv/nfs
+  360  ls -ld /srv/nfs
+  361  sudo useradd -r -M -s /sbin/nologin nfsnobody
+  362  sudo groupadd -r nfsnogroup
+  363  sudo usermod -a -G nfsnogroup nfsnobody
+  364  sudo chown -R nfsnobody:nfsnogroup /srv/nfs
+  365  sudo chmod -R 755 /srv/nfs
+  366  sudo usermod -a -G nfsnogroup max
+  367  sudo chmod -R 775 /srv/nfs
+  368  cat /etc/passwd
+  369  cat /etc/group
+  370  sudo snapper list
+  371  snapper rollback 64
+  372  sudo snapper rollback 64
+  373  cat /etc/group
+  374  sudo snapper list
+  375  sudo snapper rollback 48
+  376  reboot 
+  377  reboot now
+  378  history
+  379  whereis history
+  380  cat /etc/group
+  381  ls -ld /srv/nfs
+  382  sudo groupadd -g 457 nfsnogroup
+  383  cat /etc/group
+  384  cat /etc/passwd
+  385  sudo useradd -u 456 -g 457 nfsnobody
+  386  sudo useradd -u 2000 -g 457 nfsnobody
+  387  cat /etc/passwd
+  388  sudo useradd -u 2000 -g 457 nfsnobody
+  389  sudo chown nfsnobody:nfsnogroup /srv/nfs
+  390  systemctl status nfs-server
+  391  cat /etc/exports
+  392  showmount -e localhost
+  393  sudo showmount -e localhost
+  394  ls -ld /srv/nfs
+  395  sudo systemctl status firewalld
+  396  sudo firewall-cmd --list-ports
+  397  sudo firewall-cmd --zone=public --add-port=2049/tcp --permanent
+  398  sudo firewall-cmd --zone=public --add-port=111/tcp --permanent
+  399  sudo firewall-cmd --list-ports
+  400  sudo firewall-cmd --reload
+  401  sudo firewall-cmd --list-ports
+  402  ip add
+  403  sudo firewall-cmd --zone=public --add-port=2049/udp --permanent
+  404  sudo firewall-cmd --reload
+  405  sudo firewall-cmd --list-ports
+  406  sudo firewall-cmd --zone=public --add-port=20048/tcp --permanent
+  407  sudo firewall-cmd --reload
+  408  timer
+  409  while true; do printfs '%\r' "$(date); done
+  410  rdesktop
+  411  sudo zypper install rdesktop
+  412  rdesktop
+  413  rdesktop vm-w11-bench
+  414  rdesktop -u var -p letsgo23. vm-w11-bench
+  415  rdesktop -u var -p letsgo23. -V vm-w11-bench
+  416  rdesktop -u var -p letsgo23. vm-w11-bench
+  417  vim x1.sh
+  418  ls -l /srv/nfs
+  419  cat /etc/exports
+  420  vim /etc/exports
+  421  sudo vim /etc/exports
+  422  sudo systemctl restart nfs-server
+  423  ls -l /srv/nfs
+  424  sudo vim /etc/exports
+  425  sudo systemctl restart nfs-server
+  426  cd /usr/src
+  427  ls
+  428  cd 
+  429  find git
+  430  ls -a
+  431  whereis git
+  432  cd src
+  433  ls
+  434  pmox
+  435  cd pmox
+  436  git status
+  437  git pull
+  438  ls
+  439  cd togpt
+  440  ls
+  441  vim 1.sh
+  442  vim x1.sh
+  443  git add .
+  444  git commit
+  445  git push origin master
+  446  vim x1.sh
+  447  vim x2.sh
+  448  git status
+  449  git add .
+  450  git commit
+  451  git push
+  452  vim x1.sh
+  453  vim x2.sh
+  454  git add .
+  455  git commit
+  456  git push
+  457  git push origin master
+  458  su
+  459  start wayland
+  460  wayland
+  461  kde
+  462  whereis kde
+  463  exit
+  464  ls
+  465  ls Downloads
+  466  sddm
+  467  sudo sddm
+  468  history
+  469  ls /home/max/src
+  470  cd /home/max/src
+  471  cd suse
+  472  ls
+  473  git status
+  474  history > .
+  475  history > . history
+  476  history > history.txt
